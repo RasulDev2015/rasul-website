@@ -1,0 +1,212 @@
+body {
+    background: linear-gradient(135deg, #023e8a, #03045e);
+    margin: 0;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    position: relative;
+    height: 100%;
+}
+
+body p {
+    background: linear-gradient(orange, yellow);
+    color: #015323;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+    font-weight: bold;
+}
+
+body h1,
+body h2,
+body h3,
+body h4,
+body h5,
+body h6 {
+    color: orange;
+    background: linear-gradient(#2ecc71, green);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    width: 100%;
+}
+
+body h1:hover,
+body h2:hover,
+body h3:hover,
+body h4:hover,
+body h5:hover,
+body h6:hover {
+    background: linear-gradient(orange, yellow);
+    color: #015323;
+    border: 3px solid #000000;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #222230;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.div-01 {
+    display: none;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+.nav-list li a {
+    background: linear-gradient(orange, yellow);
+    color: #015323;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+.nav-list li a:hover {
+    background: linear-gradient(#2ecc71, green);
+    color: orange;
+}
+
+.game-screenshot {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    display: block;
+    margin: 15px 0;
+}
+
+body a {
+    background: linear-gradient(orange, yellow);
+    color: #015323;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 0;
+    width: fit-content;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+}
+
+body a:hover {
+    color: orange;
+    background: linear-gradient(#2ecc71, green);
+}
+
+.fl-btn {
+    background: linear-gradient(orange, yellow);
+    justify-content: center;
+}
+
+.swiper {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.footer-element:hover {
+    color: orange;
+    background: linear-gradient(#2ecc71, green);
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: flex-end;
+        position: relative;
+    }
+
+    .div-01 {
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 12px;
+        padding: 10px;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #222230;
+        border: 1px solid #333344;
+        border-radius: 4px;
+        min-width: 200px;
+        z-index: 10;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.3s, opacity 0.3s ease;
+    }
+
+    .div-01:hover ~ .nav-list,
+    .nav-list:hover {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px 10px;
+        margin-bottom: 20px;
+    }
+
+    section > div, 
+    .cards-container, 
+    .grid {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .section6-list {
+        display: flex;
+        flex-direction: column;
+        padding-left: 20px;
+        gap: 10px;
+    }
+
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+        padding: 20px 15px;
+    }
+
+    .footer-element {
+        margin: 0;
+    }
+}
